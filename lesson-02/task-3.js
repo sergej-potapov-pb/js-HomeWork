@@ -17,7 +17,7 @@ break;
 default:
 console.log( 'unknown' );
 }
-```
+
 */
 
 let val = 'a';
