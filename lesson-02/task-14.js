@@ -12,8 +12,8 @@ while(n>=50){
   num++;
   let tmp= n/2;
   n = tmp;
-  console.log(num + " : "+n);
+  console.log(num + " : " + n);
 
 }
-console.log("результат деления :"+n);
-console.log("затрачено итераций :"+num);
+console.log("результат деления :" + n);
+console.log("затрачено итераций :" + num);

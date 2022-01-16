@@ -13,7 +13,7 @@ var arr = [1,2,3,4];
 
 let arr = [1,2,3,4];
 let asum=0;
-for(var i=0; i<arr.length; i++){
+for(let i=0; i<arr.length; i++){
   asum+=arr[i];
 }
 console.log(asum);
