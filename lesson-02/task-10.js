@@ -13,8 +13,9 @@ var arr = [6,5,4,3,2,1];
 let arr = [6,5,4,3,2,1];
 
 console.log(arr);
-for(let i=0; i<arr.length; i++){
-  for(let z=i; z<arr.length;z++ ){
+let arrLength=arr.length;
+for(let i=0; i<arrLength; i++){
+  for(let z=i; z<arrLength;z++ ){
      if(arr[i] > arr[z]){
        let tmp = arr[i];
        arr[i] = arr[z];

@@ -6,7 +6,9 @@
 */
 
 let arr=[1, 2, 5, 9, 4, 13, 4, 10];
-for(let i=0; i<arr.length; i++){
+
+let arrLength=arr.length;
+for(let i=0; i<arrLength; i++){
   if(arr[i]==4){
     console.log("Есть!");
     break;

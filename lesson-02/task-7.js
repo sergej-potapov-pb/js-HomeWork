@@ -12,7 +12,8 @@ var arr = [1,2,3,4];
 
 let arr = [1,2,3,4];
 let asum=0;
-for(let i=0; i<arr.length; i++){
+let arrLength=arr.length;
+for(let i=0; i<arrLength; i++){
   if(arr[i]% 2 == 0){
     asum+=arr[i];
   }
