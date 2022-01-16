@@ -20,13 +20,11 @@ console.log( 'unknown' );
 
 */
 
-let val = 'a';
+let val = 'd';
 if(val == 'a'){
   console.log( 'a' );
-  break;
-} else if((val =='b') || (val =='c')  || (val =='d')  || (val =='e') ) {
+  } else if((val =='b') || (val =='c')  || (val =='d')  || (val =='e') ) {
   console.log( 'others' );
-  break;
-} else {
+  } else {
   console.log( 'unknown' );
 }
