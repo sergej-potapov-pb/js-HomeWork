@@ -9,3 +9,12 @@ var arr = [1,2,3,4];
 
 - Не разрашается использовать специальные методы массивов.
 */
+
+let arr = [1,2,3,4];
+let asum=0;
+for(var i=0; i<arr.length; i++){
+  if(arr[i]% 2 == 0){
+    asum+=arr[i];
+  }
+}
+console.log(asum);
