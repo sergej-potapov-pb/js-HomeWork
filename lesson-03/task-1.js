@@ -7,3 +7,15 @@ f('Content'); // Error: parameter type is not a Number
 ```
 */
 
+function f(a){
+    let res;
+    if( typeof a==='number'){
+        let res = a*a*a;
+    } else {
+        throw new Error("parameter type is not a Number");
+    }
+    return res;
+}
+
+f(2); // 8
+f('Content'); // Error: parameter type is not a Number
