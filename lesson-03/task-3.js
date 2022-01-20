@@ -17,10 +17,10 @@ function f(a,b,c){
             res = (a-b)/c;
         } else {
             throw new Error("devide by zero");
-        }
-        res = (a-b)/c;
+        };
     } else {
         throw new Error("parameter type is not a Number");
-    }
+    };
     return res;
 }
+
