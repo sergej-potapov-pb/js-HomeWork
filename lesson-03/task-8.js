@@ -14,3 +14,24 @@ f([]) // Error: parameter can't be an empty
 ```
 */
 
+function f(arr, n) {
+  if (n===undefined) {
+    n=0
+  }
+  if (Array.isArray(arr)) {
+    if (arr.length>0) {
+      console.log(arr[n++]);
+      if (n < arr.length) f(arr, n)
+      else n=0;
+    } else {
+      throw new Error('parameter can\'t be an empty')
+    }
+  } else {
+    throw new Error('parameter type should be an array')
+  }
+}
+
+f([1, 2, 3]);
+f(1,2,3); // Error: parameter type should be an array
+//f('Content'); // Error: parameter type should be an array
+//f([]); // Error: parameter can't be an empty

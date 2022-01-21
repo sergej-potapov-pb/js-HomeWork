@@ -19,10 +19,10 @@ function getDivisors(numb) {
         }
       }
     } else {
-      throw new Error("Error: parameter can't be a 0");
+      throw new Error('parameter can\'t be a 0');
     }
   } else {
-    throw new Error("Error: parameter type is not a Number");
+    throw new Error('parameter type is not a Number');
   }
   return resArr;
 }
