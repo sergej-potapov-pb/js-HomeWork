@@ -13,7 +13,7 @@ function f(a){
     if( typeof a==='number'){
         res = a*a*a;
     } else {
-        throw new Error("parameter type is not a Number");
+        throw new Error('parameter type is not a Number')
     }
     return res;
 }

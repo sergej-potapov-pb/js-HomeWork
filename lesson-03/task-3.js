@@ -17,14 +17,14 @@ function f(a,b,c){
             
             res = (a-b)/c;
         } else {
-            throw new Error("division by zero");
+            throw new Error('division by zero')
         };
     } else {
-        throw new Error("all parameters type should be a Number");
+        throw new Error('all parameters type should be a Number')
     };
     return res;
 };
 
 console.log( f(9,3,2)); // 3
-//console.log( f('s',9,3)); // Error: all parameters type should be a Number
+console.log( f('s',9,3)); // Error: all parameters type should be a Number
 console.log( f(9,3,0)); // Error: division by zero

@@ -15,7 +15,7 @@ function f(){
         if( typeof el==='number'){
             res += el
         } else {
-            throw new Error("all parameters type should be a Number")
+            throw new Error('all parameters type should be a Number')
         };
     };
     return res;

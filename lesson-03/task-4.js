@@ -31,11 +31,11 @@ function f(a){
         }
      
         } else {
-                throw new Error("parameter should be in the range of 1 to 7");
+                throw new Error("parameter should be in the range of 1 to 7")
 
         };
     } else {
-        throw new Error("parameter type is not a Number");
+        throw new Error("parameter type is not a Number")
     }
     return res;
 }
