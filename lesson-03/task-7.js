@@ -17,12 +17,12 @@ function getDivisors(numb) {
         if (numb % i == 0) {
           resArr.push(i);
         }
-      }
+      };
     } else {
-      throw new Error('parameter can\'t be a 0');
-    }
+      throw new Error('parameter can\'t be a 0')
+    };
   } else {
-    throw new Error('parameter type is not a Number');
+    throw new Error('parameter type is not a Number')
   }
   return resArr;
 }

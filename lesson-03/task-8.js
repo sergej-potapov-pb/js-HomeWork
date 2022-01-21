@@ -17,12 +17,12 @@ f([]) // Error: parameter can't be an empty
 function f(arr, n) {
   if (n===undefined) {
     n=0
-  }
+  };
   if (Array.isArray(arr)) {
     if (arr.length>0) {
       console.log(arr[n++]);
-      if (n < arr.length) f(arr, n)
-      else n=0;
+      if (n < arr.length) f(arr, n) 
+      else n=0;                       // обнуляем для следующего нового вызова функции
     } else {
       throw new Error('parameter can\'t be an empty')
     }

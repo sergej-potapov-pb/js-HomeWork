@@ -28,7 +28,7 @@ function f(a){
                     break;
             case 7: res = "восскресение";        
                     break;
-        }
+        };
      
         } else {
                 throw new Error("parameter should be in the range of 1 to 7")
@@ -36,7 +36,7 @@ function f(a){
         };
     } else {
         throw new Error("parameter type is not a Number")
-    }
+    };
     return res;
 }
 
