@@ -14,5 +14,23 @@ arr.push(2);
 console.log(arr[1]); // выведет число 2
 ```
 */
+function isPositive(numb){
+    let res=false;
+    if(typeof numb==='number'){
+        res = (numb>0) ? true:false
+    } else {
+        throw new Error('parameter type is not a Number')
+    }
+    return res;
+}
+let srcArr=[1, 2, -4, 3, -9, -1, 7];
+let resArr=[];
 
+for(const el of srcArr){
+    if(isPositive(el)){
+        resArr.push(el);
+    }
+}
 
+console.log(srcArr);
+console.log(resArr);
