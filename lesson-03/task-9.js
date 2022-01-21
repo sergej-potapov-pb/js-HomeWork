@@ -21,6 +21,17 @@ console.log(solution([9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9
 function solution(a, b) {
     
     let res = [];
+    if (a.length==0 && b.length==0) {
+        return res;
+        
+    };
+    if (a.length==0 && b.length>0) {
+        return b;
+    };
+    if (a.length>0 && b.length==0) {
+        return a;
+    };
+
     let aStr ='' ;
     let bStr ='' ;
     
@@ -30,13 +41,19 @@ function solution(a, b) {
     for (const el of b) {
         bStr += el;
     };
+    let resNum;
+    if (aStr.length>16 || bStr.length>16) {
+        resNum = BigInt(aStr)+BigInt(bStr);
+    
+    } else{
+        resNum = parseInt(aStr)+parseInt(bStr);
 
-    let resNum = parseInt(aStr)+parseInt(bStr);
+    }
     let resStr = resNum.toString();
-    console.log(resStr);
+    //console.log(resStr);
     let slen = resStr.length;
     for (let i=0;i<slen;i++) {
-        res[i] = resStr[i];
+        res[i] = parseInt(resStr[i]);
     };
 
     return res;
