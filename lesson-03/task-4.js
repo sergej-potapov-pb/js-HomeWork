@@ -12,7 +12,8 @@ f('1'); // Error: parameter type is not a Number
 function f(a){
     let res;
     if( typeof a==='number'){
-        switch(a){
+        if((a>=1) && (a<=7)){
+         switch(a){
             case 1: res ="понедельник";
                     break;
             case 2: res = "вторник";        
@@ -27,8 +28,12 @@ function f(a){
                     break;
             case 7: res = "восскресение";        
                     break;
+         }
      
-        }
+        } else {
+                throw new Error("parameter should be in the range of 1 to 7");
+
+        };
     } else {
         throw new Error("parameter type is not a Number");
     }
@@ -36,6 +41,6 @@ function f(a){
 }
 
 console.log( f(1)); // Воскресенье
-console.log( f(2); // Понедельник
-console.log( f(8); // Error: parameter should be in the range of 1 to 7
-console.log( f('1'); // Error: parameter type is not a Number
+console.log( f(2)); // Понедельник
+console.log( f(8)); // Error: parameter should be in the range of 1 to 7
+console.log( f('1')); // Error: parameter type is not a Number
