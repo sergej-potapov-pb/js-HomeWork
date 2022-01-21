@@ -25,10 +25,10 @@ function f(arr, n) {
       else n=0;                       // обнуляем для следующего нового вызова функции
     } else {
       throw new Error('parameter can\'t be an empty')
-    }
+    };
   } else {
     throw new Error('parameter type should be an array')
-  }
+  };
 }
 
 f([1, 2, 3]);
