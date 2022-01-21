@@ -10,3 +10,15 @@ isEven('Content'); // Error: parameter type is not a Number
 ```
 */
 
+function isEven(numb){
+    let res=false;
+    if(typeof numb==='number'){
+        res = (numb%2==0) ? true:false
+    } else {
+        throw new Error('parameter type is not a Number')
+    }
+    return res;
+}
+console.log(isEven(3)); // false
+console.log(isEven(4)); // true
+console.log(isEven('Content')); // Error: parameter type is not a Number
