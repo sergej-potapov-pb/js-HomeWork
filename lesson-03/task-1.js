@@ -22,3 +22,4 @@ let r = f(2); // 8
 console.log("-> "+r);
 r = f('Content'); // Error: parameter type is not a Number
 console.log("-> "+r);
+
