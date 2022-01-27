@@ -11,3 +11,27 @@ const arr = [1,2,3];
 forEach(arr, function(item, i, arr) {});
 ```
 */
+
+const arr = [1, 2, 5];
+
+let myEach = function (arr, callback) {
+  let i;
+  if (Array.isArray(arr) && typeof callback === "function") {
+    let length = arr.length;
+    for (i = 0; i < length; i = i + 1) {
+      callback(arr[i], i, arr);
+    }
+  } else {
+    throw new Error("не верно заданы параметры");
+  }
+};
+
+myEach(arr, function (num, i, nums) {
+  console.log("Number: " + num + ", index: " + i + ",", nums);
+});
+
+console.log("-------");
+
+myEach(arr, function (item, index, arr) {
+  console.log(item * 2, index);
+});
