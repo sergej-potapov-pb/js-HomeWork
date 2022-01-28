@@ -15,14 +15,13 @@ forEach(arr, function(item, i, arr) {});
 const arr = [1, 2, 5];
 
 let myEach = function (arr, callback) {
-  let i;
   if (Array.isArray(arr) && typeof callback === "function") {
     let length = arr.length;
-    for (i = 0; i < length; i = i + 1) {
+    for (let i = 0; i < length; i++) {
       callback(arr[i], i, arr);
     }
   } else {
-    throw new Error("не верно заданы параметры");
+    throw new Error("не верно заданы параметры функции myEach");
   }
 };
 
