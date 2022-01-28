@@ -34,3 +34,10 @@ let resArr = myFilter(arrSrc, function (num) {
 });
 
 console.log(resArr);
+console.log("-------");
+
+console.log(
+  myFilter(arrSrc, function (num) {
+    return num < 6;
+  })
+);

@@ -33,3 +33,10 @@ let resEvery = myEvery(arrSrc, function (num) {
 });
 
 console.log(resEvery);
+console.log("-------");
+
+console.log(
+  myEvery(arrSrc, function (num) {
+    return num === 4;
+  })
+);
