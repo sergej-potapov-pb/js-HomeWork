@@ -12,7 +12,7 @@ reverse(arr); // [1,2,3]
 ```
 */
 
-const arrSrc = [1, 2, 3];
+const arrSrc = [3, 2, 1];
 
 // через for
 function reverse(arr) {
