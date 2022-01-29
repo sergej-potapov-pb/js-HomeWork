@@ -13,33 +13,41 @@ reverse(arr); // [1,2,3]
 */
 
 const arrSrc = [1, 2, 3];
-const nsStart = 0;
 
-let reverse = function (arr, callback, ns) {
-  let result = ns,
+// через for
+function reverse(arr) {
+  var a = [],
     length = arr.length;
-  if (
-    length > 0 &&
-    Array.isArray(arr) &&
-    typeof callback === "function" &&
-    (typeof ns === "string" || typeof ns === "number")
-  ) {
-    for (let i = length; i > 0; i--) {
-      result = callback.call(null, result, arr[i - 1]);
+  if (length > 0 && Array.isArray(arr)) {
+    for (i = 0; i < length; i++) {
+      a[i] = arr[length - 1 - i];
     }
+    return a;
   } else {
     throw new Error("не верно заданы параметры функции reverse");
+  }
+}
+
+// через callback
+let cbReverse = function (arr, callback) {
+  let result = [],
+    length = arr.length;
+  if (length > 0 && Array.isArray(arr) && typeof callback === "function") {
+    for (let i = length; i > 0; i--) {
+      //      result = callback.call(null, result, arr[i - 1]);
+      callback.call(null, result, arr[i - 1]);
+    }
+  } else {
+    throw new Error("не верно заданы параметры функции cbReverse");
   }
   return result;
 };
 
-let resReduce = myReduceRight(
-  arrSrc,
-  function (nsStart, num) {
-    return nsStart + num;
-  },
-  nsStart
-);
-
-console.log(resReduce);
+console.log(reverse(arrSrc));
 console.log("-------");
+
+console.log(
+  cbReverse(arrSrc, function (res, el) {
+    return res.push(el);
+  })
+);
