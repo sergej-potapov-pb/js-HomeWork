@@ -30,7 +30,7 @@ let myReduce = function (arr, callback, ns) {
       result = callback.call(null, result, arr[i]);
     }
   } else {
-    throw new Error("не верно заданы параметры функции myFilter");
+    throw new Error("не верно заданы параметры функции myReduce");
   }
   return result;
 };

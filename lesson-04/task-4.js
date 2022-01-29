@@ -24,7 +24,7 @@ let mySome = function (arr, callback) {
     }
     return false;
   } else {
-    throw new Error("не верно заданы параметры функции myFilter");
+    throw new Error("не верно заданы параметры функции mySome");
   }
 };
 
