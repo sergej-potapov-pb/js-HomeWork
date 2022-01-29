@@ -34,7 +34,6 @@ let cbReverse = function (arr, callback) {
     length = arr.length;
   if (length > 0 && Array.isArray(arr) && typeof callback === "function") {
     for (let i = length; i > 0; i--) {
-      //      result = callback.call(null, result, arr[i - 1]);
       callback.call(null, result, arr[i - 1]);
     }
   } else {
